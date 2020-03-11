@@ -15,8 +15,8 @@ player_A_victory = [("paper", "rock"),
 
 def play(player_A_strategy, player_B_strategy):
     # draw action a
-    action_a = np.random.choice(player_A_actions, p=player_A_strategy)
-    action_b = np.random.choice(player_B_actions, p=player_B_strategy)
+    action_a = "rock"
+    action_b = "paper"
     print("\nA : "+action_a+", B : "+action_b)
 
     if action_a == action_b:

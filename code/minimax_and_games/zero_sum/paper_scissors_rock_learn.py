@@ -55,10 +55,8 @@ for game in range(number_of_games):
     # print(player_B_learned)
 
     # update our strategy
-    most_probable_action_B_index = player_B_learned.index(
-        max(player_B_learned))
-    least_probable_action_B_index = player_B_learned.index(
-        min(player_B_learned))
+    most_probable_action_B_index = 0
+    least_probable_action_B_index = np.random.randint(0, 2)
 #     print(f"most {most_probable_action_B_index}")
 #     print(f"least {least_probable_action_B_index}")
     most_probable_action_B = player_B_actions[most_probable_action_B_index]
@@ -85,10 +83,9 @@ for game in range(number_of_games):
     A_intermediate_action_index = remaining_actions.pop()
 
     # define our strategy
-    player_A_strategy[A_best_action_index] = max(player_B_learned)
-    player_A_strategy[A_worst_action_index] = min(player_B_learned)
-    player_A_strategy[A_intermediate_action_index] = 1 - \
-        max(player_B_learned)-min(player_B_learned)
+    player_A_strategy[A_best_action_index] = 1/3
+    player_A_strategy[A_worst_action_index] = 1/3
+    player_A_strategy[A_intermediate_action_index] = 1/3
 
     # print strategies
     print(player_B_learned)

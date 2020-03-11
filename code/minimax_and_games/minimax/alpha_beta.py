@@ -70,8 +70,8 @@ def alpha_beta(node, values, alpha, beta, padding):
         for next_node in successors[node]:
             # print(pad+f" alpha={alpha}")
             # print(pad+f" beta={beta}")
-            if alpha < beta:
-                alpha = max(alpha, alpha_beta(next_node,
+            if alpha > 0:
+                alpha = min(alpha, alpha_beta(next_node,
                                               values,
                                               alpha,
                                               beta,
@@ -90,8 +90,8 @@ def alpha_beta(node, values, alpha, beta, padding):
         for next_node in successors[node]:
             # print(pad+f" alpha={alpha}")
             # print(pad+f" beta={beta}")
-            if alpha < beta:
-                beta = min(beta, alpha_beta(next_node,
+            if beta > 0:
+                beta = max(beta, alpha_beta(next_node,
                                             values,
                                             alpha,
                                             beta,

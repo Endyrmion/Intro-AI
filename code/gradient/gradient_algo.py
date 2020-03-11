@@ -31,7 +31,7 @@ plt.savefig('function_to_minimize.pdf')
 plt.close()
 
 # initialize the starting point
-scope = 4
+scope = 20
 x_star = np.random.uniform(-scope, scope)
 y_star = np.random.uniform(-scope, scope)
 

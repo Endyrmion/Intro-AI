@@ -80,7 +80,7 @@ def test_linear_separator(a, offset, data_1, data_2):
         # store this distance
         distances.append(point_distance_to_dataset)
     # the margin is the minimum of these distances
-    margin = min(distances)
+    margin = max(distances)
 
     # plot
     plt.plot(x_data_1, y_data_1, 'o', color="sandybrown")
@@ -105,7 +105,7 @@ def test_linear_separator(a, offset, data_1, data_2):
 # test_linear_separator(6, -2400, data_1, data_2)
 # test_linear_separator(6, -2600, data_1, data_2)
 
-nb_test = 30
+nb_test = 3
 for test_index in range(nb_test):
     a = np.random.uniform(5, 7)
     b = np.random.randint(-3000, -2000)

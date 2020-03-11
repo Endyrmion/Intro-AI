@@ -80,7 +80,7 @@ def minimax(node, values, padding):
             # please edit here
             next_values.append(minimax(next_node, values, padding+1))
         # find the maximum
-        value = max(next_values)
+        value = min(next_values)
         # update the dictionary of values
         # if the key does not exist, it is created
         values[node] = value
@@ -95,7 +95,7 @@ def minimax(node, values, padding):
             # please edit here
             next_values.append(minimax(next_node, values, padding+1))
         # find the maximum
-        value = min(next_values)
+        value = max(next_values)
         # update the dictionary of values
         values[node] = value
         # return the result
